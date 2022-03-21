@@ -8,10 +8,25 @@ public class CameraRenderer
 {
     private ScriptableRenderContext _context;
     private Camera _camera;
+
+    private CullingResults _cullingResults;
+    static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
+
+    const string bufferName = "Render Camera";
+    CommandBuffer buffer = new CommandBuffer
+    {
+        name = bufferName
+    };
+
     public void Render(ScriptableRenderContext context, Camera camera)
     {
         _camera = camera;
         _context = context;
+
+        if (!Cull())
+        {
+            return;
+        }
 
         Setup();
         DrawVisiableGeometry();
@@ -21,15 +36,55 @@ public class CameraRenderer
     void Setup()
     {
         _context.SetupCameraProperties(_camera);
+        buffer.ClearRenderTarget(true, true, Color.clear);
+        buffer.BeginSample(bufferName);
+        ExecuteBuffer();
     }
 
     void DrawVisiableGeometry()
     {
+        var sortingSettings = new SortingSettings(_camera)
+        {
+            criteria = SortingCriteria.CommonOpaque
+        };
+        var drawingSettings = new DrawingSettings(
+            unlitShaderTagId, sortingSettings
+        );
+        var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
+
+        _context.DrawRenderers(
+            _cullingResults, ref drawingSettings, ref filteringSettings
+        );
         _context.DrawSkybox(_camera);
+
+        filteringSettings = new FilteringSettings(RenderQueueRange.transparent);
+        _context.DrawRenderers(
+            _cullingResults, ref drawingSettings, ref filteringSettings
+        );
     }
 
     void Submit()
     {
+        buffer.EndSample(bufferName);
+        ExecuteBuffer();
         _context.Submit();
+    }
+
+    void ExecuteBuffer()
+    {
+        _context.ExecuteCommandBuffer(buffer);
+        buffer.Clear();
+    }
+
+    bool Cull()
+    {
+        ScriptableCullingParameters p;
+        if (_camera.TryGetCullingParameters(out p))
+        {
+            _cullingResults = _context.Cull(ref p);
+            return true;
+        }
+
+        return false;
     }
 }
