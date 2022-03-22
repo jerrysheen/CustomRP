@@ -11,7 +11,16 @@ public class CameraRenderer
 
     private CullingResults _cullingResults;
     static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
-
+    static Material _errorMaterial;
+    static ShaderTagId[] legacyShaderTagIds = {
+        new ShaderTagId("Always"),
+        new ShaderTagId("ForwardBase"),
+        new ShaderTagId("PrepassBase"),
+        new ShaderTagId("Vertex"),
+        new ShaderTagId("VertexLMRGBM"),
+        new ShaderTagId("VertexLM")
+    };
+    
     const string bufferName = "Render Camera";
     CommandBuffer buffer = new CommandBuffer
     {
@@ -30,6 +39,7 @@ public class CameraRenderer
 
         Setup();
         DrawVisiableGeometry();
+        //DrawUnsupportedShaders();
         Submit();
     }
 
@@ -86,5 +96,23 @@ public class CameraRenderer
         }
 
         return false;
+    }
+    
+    void DrawUnsupportedShaders () {
+        var drawingSettings = new DrawingSettings(
+            legacyShaderTagIds[0], new SortingSettings(_camera)
+        ){
+            overrideMaterial = _errorMaterial
+        };
+        for (int i = 1; i < legacyShaderTagIds.Length; i++) {
+            drawingSettings.SetShaderPassName(i, legacyShaderTagIds[i]);
+        }
+        if (_errorMaterial == null) {
+             _errorMaterial = new Material(Shader.Find("Hidden/InternalErrorShader"));
+        }
+        var filteringSettings = FilteringSettings.defaultValue;
+        _context.DrawRenderers(
+            _cullingResults, ref drawingSettings, ref filteringSettings
+        );
     }
 }
