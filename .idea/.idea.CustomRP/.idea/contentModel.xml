@@ -13,6 +13,10 @@
             <e p="CustomRenderPipeline.cs" t="Include" />
             <e p="CustomRenderPipelineAsset.cs" t="Include" />
           </e>
+          <e p="Shaders" t="Include">
+            <e p="Unilit.shader" t="Include" />
+            <e p="UnlitPass.hlsl" t="Include" />
+          </e>
         </e>
         <e p="Resources" t="Include">
           <e p="Shader" t="Include">

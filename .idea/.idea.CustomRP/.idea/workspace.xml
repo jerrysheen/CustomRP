@@ -20,6 +20,8 @@
       <option value="$PROJECT_DIR$/Assets/Resources/Shader/Test.shader" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unilit.shader" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass.hlsl" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="26Vt0LSuN71rkm819PXObvRZGYx" />
@@ -61,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647520360175</updated>
       <workItem from="1647520364762" duration="2686000" />
-      <workItem from="1647952902331" duration="14852000" />
+      <workItem from="1647952902331" duration="21495000" />
     </task>
     <servers />
   </component>
