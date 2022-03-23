@@ -11,6 +11,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F98083CB-C97E-4FA0-A4EF-2F523FEFF5E1/59/09799696/ScriptableRenderContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -18,6 +19,7 @@
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/Shader/Test.shader" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="26Vt0LSuN71rkm819PXObvRZGYx" />
@@ -59,7 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647520360175</updated>
       <workItem from="1647520364762" duration="2686000" />
-      <workItem from="1647952902331" duration="3690000" />
+      <workItem from="1647952902331" duration="14852000" />
     </task>
     <servers />
   </component>

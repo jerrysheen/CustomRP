@@ -9,6 +9,7 @@
         <e p="Custom RP" t="Include">
           <e p="Runtime" t="Include">
             <e p="CameraRenderer.cs" t="Include" />
+            <e p="CameraRenderer.Editor.cs" t="Include" />
             <e p="CustomRenderPipeline.cs" t="Include" />
             <e p="CustomRenderPipelineAsset.cs" t="Include" />
           </e>
