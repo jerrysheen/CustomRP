@@ -9,19 +9,30 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F98083CB-C97E-4FA0-A4EF-2F523FEFF5E1/59/09799696/ScriptableRenderContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/ShaderLibrary/Input.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/ShaderLibrary/Core.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.7.0/ShaderLibrary/UnityInstancing.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/ShaderLibrary/UnityInput.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/ShaderLibrary/ShaderTypes.cs.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.7.0/ShaderLibrary/SpaceTransforms.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.7.0/ShaderLibrary/Common.hlsl" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs" />
-      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" />
       <option value="$PROJECT_DIR$/Assets/Resources/Shader/Test.shader" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unilit.shader" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unilit.shader" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unlit2.shader" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass2.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="26Vt0LSuN71rkm819PXObvRZGYx" />
@@ -63,7 +74,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647520360175</updated>
       <workItem from="1647520364762" duration="2686000" />
-      <workItem from="1647952902331" duration="21495000" />
+      <workItem from="1647952902331" duration="30626000" />
     </task>
     <servers />
   </component>

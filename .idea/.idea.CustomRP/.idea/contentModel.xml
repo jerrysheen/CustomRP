@@ -15,7 +15,11 @@
           </e>
           <e p="Shaders" t="Include">
             <e p="Unilit.shader" t="Include" />
+            <e p="UnityInput.hlsl" t="Include" />
+            <e p="UnityInput2.hlsl" t="Include" />
+            <e p="Unlit2.shader" t="Include" />
             <e p="UnlitPass.hlsl" t="Include" />
+            <e p="UnlitPass2.hlsl" t="Include" />
           </e>
         </e>
         <e p="Resources" t="Include">

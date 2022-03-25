@@ -1,7 +1,7 @@
-#ifndef CUSTOM_UNLIT_PASS_INCLUDED
-#define CUSTOM_UNLIT_PASS_INCLUDED
+#ifndef CUSTOM_UNLIT2_PASS_INCLUDED
+#define CUSTOM_UNLIT2_PASS_INCLUDED
 
-#include "UnityInput.hlsl"
+#include "UnityInput2.hlsl"
 
 float4 UnlitPassVertex (float3 positionOS : POSITION) : SV_POSITION {
     return TransformObjectToHClip(positionOS);
@@ -9,7 +9,7 @@ float4 UnlitPassVertex (float3 positionOS : POSITION) : SV_POSITION {
 
 float4 UnlitPassFragment ():SV_TARGET 
 {
-    return _BaseColor;
+    return _MainColor;
 }
 
 #endif
