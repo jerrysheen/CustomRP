@@ -3,8 +3,23 @@
 
 #include "UnityInput2.hlsl"
 
-float4 UnlitPassVertex (float3 positionOS : POSITION) : SV_POSITION {
-    return TransformObjectToHClip(positionOS);
+struct Attributes
+{
+    float3 positionOS : POSITION;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+struct Varyings {
+    float4 positionCS : SV_POSITION;
+    UNITY_VERTEX_INPUT_INSTANCE_ID
+};
+
+
+Varyings UnlitPassVertex (Attributes input) : SV_POSITION {
+    Varyings output;
+    UNITY_SETUP_INSTANCE_ID(input);
+    UNITY_TRANSFER_INSTANCE_ID()
+    return output;
 }
 
 float4 UnlitPassFragment ():SV_TARGET 
