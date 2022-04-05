@@ -15,16 +15,17 @@ struct Varyings {
 };
 
 
-Varyings UnlitPassVertex (Attributes input) : SV_POSITION {
+Varyings UnlitPassVertex (Attributes input){
     Varyings output;
     UNITY_SETUP_INSTANCE_ID(input);
-    UNITY_TRANSFER_INSTANCE_ID()
+    UNITY_TRANSFER_INSTANCE_ID(input, output);
+    output.positionCS = TransformObjectToHClip(input.positionOS);
     return output;
 }
 
-float4 UnlitPassFragment ():SV_TARGET 
-{
-    return _MainColor;
+float4 UnlitPassFragment (Varyings input) : SV_TARGET {
+    UNITY_SETUP_INSTANCE_ID(input);
+    return UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _MainColor);
 }
 
 #endif

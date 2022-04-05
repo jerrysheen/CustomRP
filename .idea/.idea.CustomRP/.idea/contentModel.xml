@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\elex\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\elex\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_CustomRP.1457238976.00" t="ExcludeRecursive" />
-    <e p="F:\GithubST\CustomRP" t="IncludeRecursive">
+    <e p="C:\Users\st961115\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\st961115\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_CustomRP.182598370.00" t="ExcludeRecursive" />
+    <e p="C:\Users\st961115\Documents\GitHub\CustomRP" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Custom RP" t="Include">

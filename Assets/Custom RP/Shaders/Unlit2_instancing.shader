@@ -1,8 +1,10 @@
-Shader "Custom RP/Unlit2"
+Shader "Custom RP/GPU_INSTANCING/Unlit2"
 {
     Properties
     {
         _MainColor ("Texture", Color) = (1.0, 0.4, 1.0, 1.0)
+    	[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend ("Src Blend", Float) = 1
+		[Enum(UnityEngine.Rendering.BlendMode)] _DstBlend ("Dst Blend", Float) = 0
     }
     SubShader
     {
@@ -11,6 +13,8 @@ Shader "Custom RP/Unlit2"
 
         Pass
         {
+        	Blend [_SrcBlend] [_DstBlend]
+        	
 			HLSLPROGRAM
 			#pragma multi_compile_instancing
 			#pragma vertex UnlitPassVertex

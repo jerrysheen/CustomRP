@@ -10,10 +10,13 @@
       <Path>Library/PackageCache/com.unity.ide.vscode@1.2.4</Path>
       <Path>Library/PackageCache/com.unity.mathematics@1.1.0</Path>
       <Path>Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.core@10.5.1</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.core@10.7.0</Path>
+      <Path>Library/PackageCache/com.unity.render-pipelines.universal@10.5.1</Path>
       <Path>Library/PackageCache/com.unity.render-pipelines.universal@10.7.0</Path>
       <Path>Library/PackageCache/com.unity.searcher@4.3.2</Path>
       <Path>Library/PackageCache/com.unity.services.core@1.0.1</Path>
+      <Path>Library/PackageCache/com.unity.shadergraph@10.5.1</Path>
       <Path>Library/PackageCache/com.unity.shadergraph@10.7.0</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.29</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@3.0.6</Path>
@@ -24,6 +27,7 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
+      <Path>.vs</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
