@@ -87,7 +87,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 5
     - _UVSec: 0
-    - _ZWrite: 1
+    - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.22745098, g: 0.22745098, b: 0.22745098, a: 1}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}

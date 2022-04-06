@@ -60,13 +60,17 @@ public partial class CameraRenderer
             enableDynamicBatching = useDynamicBatching,
             enableInstancing = useGPUInstancing
         };
-        var filteringSettings = new FilteringSettings(RenderQueueRange.opaque);
-
+        var filteringSettings = new FilteringSettings(RenderQueueRange.opaque); 
+        
+        // draw opaque
         _context.DrawRenderers(
             _cullingResults, ref drawingSettings, ref filteringSettings
         );
+        
+        // draw skybox
         _context.DrawSkybox(_camera);
-
+        
+        // draw transparent
         filteringSettings = new FilteringSettings(RenderQueueRange.transparent);
         _context.DrawRenderers(
             _cullingResults, ref drawingSettings, ref filteringSettings
