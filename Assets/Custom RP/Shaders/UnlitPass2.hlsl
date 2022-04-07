@@ -21,13 +21,17 @@ Varyings UnlitPassVertex (Attributes input){
     Varyings output;
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_TRANSFER_INSTANCE_ID(input, output);
+    float4 baseST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseMap_ST);
+    output.baseUV = TRANSFORM_TEX(input.baseUV, _BaseMap);
     output.positionCS = TransformObjectToHClip(input.positionOS);
     return output;
 }
 
 float4 UnlitPassFragment (Varyings input) : SV_TARGET {
     UNITY_SETUP_INSTANCE_ID(input);
-    return UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _MainColor);
+    float4 baseMap = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.baseUV);
+    float4 baseColor = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _MainColor);
+    return baseMap * baseColor;
 }
 
 #endif
