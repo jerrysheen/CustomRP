@@ -31,7 +31,11 @@ float4 UnlitPassFragment (Varyings input) : SV_TARGET {
     UNITY_SETUP_INSTANCE_ID(input);
     float4 baseMap = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, input.baseUV);
     float4 baseColor = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _MainColor);
-    return baseMap * baseColor;
+    float4 base = baseMap * baseColor;
+    #if defined(_CLIPPING)
+    clip(base.a - UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Cutoff));
+    #endif
+    return base;
 }
 
 #endif
