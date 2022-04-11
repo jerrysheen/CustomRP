@@ -10,7 +10,8 @@ public partial class CameraRenderer
     private Camera _camera;
 
     private CullingResults _cullingResults;
-    static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit");
+    static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit"),
+        litShaderTagId = new ShaderTagId("CustomLit");
 
     
     const string bufferName = "Render Camera";
@@ -60,6 +61,8 @@ public partial class CameraRenderer
             enableDynamicBatching = useDynamicBatching,
             enableInstancing = useGPUInstancing
         };
+        // draw lit.
+        drawingSettings.SetShaderPassName(1, litShaderTagId);
         var filteringSettings = new FilteringSettings(RenderQueueRange.opaque); 
         
         // draw opaque
