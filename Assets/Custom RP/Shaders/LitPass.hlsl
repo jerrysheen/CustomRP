@@ -2,6 +2,9 @@
 #define CUSTOM_LIT_PASS_INCLUDED
 
 #include "UnityInput2.hlsl"
+#include "Light.hlsl"
+#include "Lighting.hlsl"
+#include "Surface.hlsl"
 
 struct Attributes
 {
@@ -38,7 +41,13 @@ float4 LitPassFragment (Varyings input) : SV_TARGET {
     #if defined(_CLIPPING)
     clip(base.a - UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Cutoff));
     #endif
-    return base; }
+    Surface surface;
+    surface.normal = normalize(input.normalWS);
+    surface.color = base.rgb;
+    float3 color = GetLighting(surface);
+    return float4(color, surface.alpha);
+
+}
 
 #endif
 
