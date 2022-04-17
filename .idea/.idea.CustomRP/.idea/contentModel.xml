@@ -12,8 +12,15 @@
             <e p="CameraRenderer.Editor.cs" t="Include" />
             <e p="CustomRenderPipeline.cs" t="Include" />
             <e p="CustomRenderPipelineAsset.cs" t="Include" />
+            <e p="Lighting.cs" t="Include" />
           </e>
           <e p="Shaders" t="Include">
+            <e p="BRDF.hlsl" t="Include" />
+            <e p="Light.hlsl" t="Include" />
+            <e p="Lighting.hlsl" t="Include" />
+            <e p="Lit.shader" t="Include" />
+            <e p="LitPass.hlsl" t="Include" />
+            <e p="Surface.hlsl" t="Include" />
             <e p="Unilit.shader" t="Include" />
             <e p="UnityInput.hlsl" t="Include" />
             <e p="UnityInput2.hlsl" t="Include" />

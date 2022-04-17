@@ -3,24 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="c6f9a001-8993-4859-8154-3e3ae52ac775" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Custom RP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Custom RP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput.hlsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unlit2_instancing.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unlit2_instancing.shader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass2.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass2.hlsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 3.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Light.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Light.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lighting.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lighting.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lit.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lit.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/LitPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/LitPass.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Surface.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Surface.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Lit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/Lit.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +23,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.5.1/ShaderLibrary/CommonMaterial.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/Lighting.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -42,13 +45,20 @@
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass.hlsl" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unilit.shader" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unlit2.shader" />
-      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" />
-      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unlit2_instancing.shader" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput.hlsl" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass2.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Unlit2_instancing.shader" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" />
       <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" />
-      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipelineAsset.cs" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Runtime/Lighting.cs" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Light.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lit.shader" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Surface.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/LitPass.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/BRDF.hlsl" />
+      <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lighting.hlsl" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="26Vt0LSuN71rkm819PXObvRZGYx" />
@@ -61,6 +71,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -94,7 +105,8 @@
       <workItem from="1647520364762" duration="2686000" />
       <workItem from="1647952902331" duration="36800000" />
       <workItem from="1648965762574" duration="3131000" />
-      <workItem from="1649156406098" duration="4627000" />
+      <workItem from="1649156406098" duration="6361000" />
+      <workItem from="1650168217782" duration="12549000" />
     </task>
     <servers />
   </component>
@@ -103,6 +115,17 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

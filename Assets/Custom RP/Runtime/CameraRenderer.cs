@@ -12,9 +12,10 @@ public partial class CameraRenderer
     private CullingResults _cullingResults;
     static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit"),
         litShaderTagId = new ShaderTagId("CustomLit");
-
     
     const string bufferName = "Render Camera";
+    private Lighting lighting = new Lighting();
+    
     CommandBuffer buffer = new CommandBuffer
     {
         name = bufferName
@@ -33,7 +34,7 @@ public partial class CameraRenderer
         {
             return;
         }
-
+        lighting.Setup(context, _cullingResults);
         Setup();
         DrawVisiableGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
