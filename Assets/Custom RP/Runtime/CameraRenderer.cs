@@ -23,18 +23,19 @@ public partial class CameraRenderer
 
     public void Render(
         ScriptableRenderContext context, Camera camera,
-        bool useDynamicBatching, bool useGPUInstancing)
+        bool useDynamicBatching, bool useGPUInstancing,
+        ShadowSettings shadowSettings)
     {
         _camera = camera;
         _context = context;
         
         PrepareBuffer();
         PrepareForSceneWindow();
-        if (!Cull())
+        if (!Cull(shadowSettings.maxDistance))
         {
             return;
         }
-        lighting.Setup(context, _cullingResults);
+        lighting.Setup(context, _cullingResults, shadowSettings);
         Setup();
         DrawVisiableGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
@@ -94,11 +95,12 @@ public partial class CameraRenderer
         buffer.Clear();
     }
 
-    bool Cull()
+    bool Cull(float maxShadowDistance)
     {
         ScriptableCullingParameters p;
         if (_camera.TryGetCullingParameters(out p))
         {
+            p.shadowDistance = Mathf.Min(maxShadowDistance, _camera.farClipPlane);;
             _cullingResults = _context.Cull(ref p);
             return true;
         }

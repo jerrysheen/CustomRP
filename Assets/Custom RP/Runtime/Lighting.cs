@@ -5,6 +5,9 @@ using Unity.Collections;
 public class Lighting {
 
     const int maxDirLightCount = 4;
+    const int maxShadowedDirectionalLightCount = 1;
+    int ShadowedDirectionalLightCount;
+    
     static int
         dirLightCountId = Shader.PropertyToID("_DirectionalLightCount"),
         dirLightColorsId = Shader.PropertyToID("_DirectionalLightColors"),
@@ -20,9 +23,10 @@ public class Lighting {
     };
 
     private CullingResults cullingResults;
-    public void Setup (ScriptableRenderContext context, CullingResults cullingResults) 
+    public void Setup (ScriptableRenderContext context, CullingResults cullingResults, ShadowSettings shadowSettings) 
     {
         this.cullingResults = cullingResults;
+        ShadowedDirectionalLightCount = 0;
         buffer.BeginSample(bufferName);
         SetupLights();
         buffer.EndSample(bufferName);
@@ -52,5 +56,24 @@ public class Lighting {
     void SetupDirectionalLight (int index, ref VisibleLight visibleLight){
         dirLightColors[index] = visibleLight.finalColor;
         dirLightDirections[index] = -visibleLight.localToWorldMatrix.GetColumn(2);
+    }
+    
+    struct ShadowedDirectionalLight {
+        public int visibleLightIndex;
+    }
+
+    ShadowedDirectionalLight[] ShadowedDirectionalLights =
+        new ShadowedDirectionalLight[maxShadowedDirectionalLightCount];
+
+    public void ReserveDirectionalShadows(Light light, int visibleLightIndex)
+    {
+        if (ShadowedDirectionalLightCount < maxShadowedDirectionalLightCount &&
+            light.shadows != LightShadows.None && light.shadowStrength > 0f &&
+            cullingResults.GetShadowCasterBounds(visibleLightIndex, out Bounds b);
+            ShadowedDirectionalLights[ShadowedDirectionalLightCount++] =
+                new ShadowedDirectionalLight {
+                    visibleLightIndex = visibleLightIndex
+                };
+        }
     }
 }
