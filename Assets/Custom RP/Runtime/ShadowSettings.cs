@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShadowSettings {
 
     [Min(0f)]
-    public float maxDistance = 100f;
+    public float maxDistance = 10f;
     
     public enum TextureSize {
         _256 = 256, _512 = 512, _1024 = 1024,

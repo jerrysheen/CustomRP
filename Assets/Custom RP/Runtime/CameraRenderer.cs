@@ -35,11 +35,15 @@ public partial class CameraRenderer
         {
             return;
         }
+        buffer.BeginSample(SampleName);
+        ExecuteBuffer();
         lighting.Setup(context, _cullingResults, shadowSettings);
+        buffer.EndSample(SampleName);
         Setup();
         DrawVisiableGeometry(useDynamicBatching, useGPUInstancing);
         DrawUnsupportedShaders();
         DrawGizmos();
+        lighting.Cleanup();
         Submit();
     }
 
@@ -76,6 +80,9 @@ public partial class CameraRenderer
         _context.DrawSkybox(_camera);
         
         // draw transparent
+        sortingSettings.criteria = SortingCriteria.CommonTransparent;
+        drawingSettings.sortingSettings = sortingSettings;
+        filteringSettings.renderQueueRange = RenderQueueRange.transparent;
         filteringSettings = new FilteringSettings(RenderQueueRange.transparent);
         _context.DrawRenderers(
             _cullingResults, ref drawingSettings, ref filteringSettings
