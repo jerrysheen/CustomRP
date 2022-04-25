@@ -3,6 +3,7 @@
 
 #include "UnityInput2.hlsl"
 #include "Surface.hlsl"
+#include "Shadows.hlsl"
 #include "Light.hlsl"
 #include "BRDF.hlsl"
 #include "Lighting.hlsl"
@@ -44,7 +45,8 @@ float4 LitPassFragment (Varyings input) : SV_TARGET {
     #if defined(_CLIPPING)
     clip(base.a - UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Cutoff));
     #endif
-    Surface surface;    
+    Surface surface;
+    surface.position = input.positionWS;
     surface.normal = normalize(input.normalWS);
     surface.viewDirection = normalize(_WorldSpaceCameraPos - input.positionWS);
     surface.color = base.rgb;
