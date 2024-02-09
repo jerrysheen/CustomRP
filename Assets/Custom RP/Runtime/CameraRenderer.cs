@@ -13,6 +13,7 @@ public partial class CameraRenderer
     static ShaderTagId unlitShaderTagId = new ShaderTagId("SRPDefaultUnlit"),
         litShaderTagId = new ShaderTagId("CustomLit");
     
+
     const string bufferName = "Render Camera";
     private Lighting lighting = new Lighting();
     
@@ -50,13 +51,18 @@ public partial class CameraRenderer
     void Setup()
     {
         _context.SetupCameraProperties(_camera);
-        buffer.ClearRenderTarget(true, true, Color.clear);
+        CameraClearFlags flags = _camera.clearFlags;
+        buffer.ClearRenderTarget(			
+            flags <= CameraClearFlags.Depth,
+            flags == CameraClearFlags.Color,
+            Color.clear);
         buffer.BeginSample(SampleName);
         ExecuteBuffer();
     }
 
     void DrawVisiableGeometry(bool useDynamicBatching, bool useGPUInstancing)
     {
+        // 传入的相机参数是为了判断sorting的依据是根据正交相机还是根据透视相机
         var sortingSettings = new SortingSettings(_camera)
         {
             criteria = SortingCriteria.CommonOpaque
