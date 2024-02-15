@@ -29,7 +29,6 @@ Varyings LitPassVertex (Attributes input) {
     Varyings output;
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_TRANSFER_INSTANCE_ID(input, output);
-    float4 baseST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseMap_ST);
     output.baseUV = TRANSFORM_TEX(input.baseUV, _BaseMap);
     output.positionWS = TransformObjectToWorld(input.positionOS);
     output.positionCS = TransformObjectToHClip(input.positionOS);
@@ -53,6 +52,8 @@ float4 LitPassFragment (Varyings input) : SV_TARGET {
     surface.alpha = base.a;
     surface.metallic = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Metallic);
     surface.smoothness = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _Smoothness);
+    surface.viewDirection = normalize(_WorldSpaceCameraPos - input.positionWS);
+    surface.depth = -TransformWorldToView(input.positionWS).z;
     #if defined(_PREMULTIPLY_ALPHA)
     BRDF brdf = GetBRDF(surface, true);
     #else

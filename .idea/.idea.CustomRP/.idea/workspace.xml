@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c6f9a001-8993-4859-8154-3e3ae52ac775" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/riderModule.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CustomRP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Custom RP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Custom RP.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/ShadowSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/ShadowSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Runtime/Shadows.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Runtime/Shadows.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Light.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Light.hlsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lighting.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lighting.hlsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lit.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lit.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/LitPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/LitPass.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/ShadowCasterPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/ShadowCasterPass.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Shadows.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Shadows.hlsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Surface.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/Surface.hlsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnityInput2.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass2.hlsl" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Custom RP/Shaders/UnlitPass2.hlsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/CustomUnlit 1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Materials/Lit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Materials/Lit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +45,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3b24cc7fa9794ed8ab04312c53e6dedd172c00/07/ab91c315/GizmoSubset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3b24cc7fa9794ed8ab04312c53e6dedd172c00/1e/1d571032/ShadowSplitData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3b24cc7fa9794ed8ab04312c53e6dedd172c00/be/9203265f/RenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/801ef9485ea54ad392ab1752511dc74814fc18/06/10ecd10b/SortingCriteria.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/801ef9485ea54ad392ab1752511dc74814fc18/1b/ab3f0e6d/RenderPipelineAsset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/801ef9485ea54ad392ab1752511dc74814fc18/3e/7ff15605/RenderPipeline.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/801ef9485ea54ad392ab1752511dc74814fc18/61/963f5c72/CullingResults.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/801ef9485ea54ad392ab1752511dc74814fc18/9a/60c98d4b/ScriptableRenderContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.Editor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CameraRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@10.5.1/ShaderLibrary/CommonMaterial.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/CustomRenderPipeline.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Custom RP/Runtime/Lighting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.8/Tests/Editor/ShaderStripping/ShaderStrippingReportTests.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -61,24 +82,55 @@
       <option value="$PROJECT_DIR$/Assets/Custom RP/Shaders/Lighting.hlsl" />
     </changedPaths>
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="26Vt0LSuN71rkm819PXObvRZGYx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\61995\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\61995\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\61995\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="F:\STWorkSation\UnityEditor\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath F:\STWorkSation\GithubProject\CustomRP -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="F:\STWorkSation\GithubProject\CustomRP" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="F:\STWorkSation\UnityEditor\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath F:\STWorkSation\GithubProject\CustomRP -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="F:\STWorkSation\GithubProject\CustomRP" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -88,6 +140,7 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -107,12 +160,21 @@
       <workItem from="1648965762574" duration="3131000" />
       <workItem from="1649156406098" duration="6361000" />
       <workItem from="1650168217782" duration="12549000" />
+      <workItem from="1707397020154" duration="119000" />
+      <workItem from="1707397752231" duration="2097000" />
+      <workItem from="1707443807142" duration="25524000" />
+      <workItem from="1707532817525" duration="2665000" />
+      <workItem from="1707635429828" duration="1221000" />
+      <workItem from="1707639192724" duration="6056000" />
+      <workItem from="1707729349385" duration="13721000" />
+      <workItem from="1707894286278" duration="4616000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,5 +190,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

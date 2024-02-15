@@ -21,8 +21,8 @@ Varyings UnlitPassVertex (Attributes input){
     Varyings output;
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_TRANSFER_INSTANCE_ID(input, output);
-    float4 base_ST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseMap_ST);
-    output.baseUV = TRANSFORM_TEX(input.baseUV, base);
+    //float4 base_ST = UNITY_ACCESS_INSTANCED_PROP(UnityPerMaterial, _BaseMap_ST);
+    output.baseUV = TRANSFORM_TEX(input.baseUV, _BaseMap);
     output.positionCS = TransformObjectToHClip(input.positionOS);
     return output;
 }

@@ -4,8 +4,11 @@
 TEXTURE2D(_BaseMap);
 SAMPLER(sampler_BaseMap);
 
+CBUFFER_START(UnityPerMaterial)
+    float4 _BaseMap_ST;
+CBUFFER_END
+
 UNITY_INSTANCING_BUFFER_START(UnityPerMaterial)
-    UNITY_DEFINE_INSTANCED_PROP(float4, _BaseMap_ST)
     UNITY_DEFINE_INSTANCED_PROP(float4, _MainColor)
     UNITY_DEFINE_INSTANCED_PROP(float, _Cutoff)
     UNITY_DEFINE_INSTANCED_PROP(float, _Metallic)
