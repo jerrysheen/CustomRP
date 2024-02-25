@@ -26,9 +26,9 @@ float3 unity_ProbeVolumeMin;
 TEXTURE3D(unity_ProbeVolumeSH);
 SAMPLER(samplerunity_ProbeVolumeSH);
 
-
 struct GI {
     float3 diffuse;
+    ShadowMask shadowMask;
 };
 
 float3 SampleLightProbe (Surface surfaceWS) {
@@ -75,9 +75,29 @@ float3 SampleLightMap (float2 lightMapUV) {
 #endif
 }
 
+float4 SampleBakedShadows (float2 lightMapUV) {
+    #if defined(LIGHTMAP_ON)
+    return SAMPLE_TEXTURE2D(
+        unity_ShadowMask, samplerunity_ShadowMask, lightMapUV
+    );
+    #else
+    return 1.0;
+#endif
+}
+
 GI GetGI (float2 lightMapUV, Surface surfaceWS) {
     GI gi;
     gi.diffuse = SampleLightMap(lightMapUV) + SampleLightProbe(surfaceWS);
+    gi.shadowMask.distance = false;
+    gi.shadowMask.shadows = 1.0;
+    
+    #if defined(_SHADOW_MASK_DISTANCE)
+    gi.shadowMask.distance = true;
+    gi.shadowMask.shadows = SampleBakedShadows(lightMapUV);
+    #endif
+    
     return gi;
 }
+
+
 #endif

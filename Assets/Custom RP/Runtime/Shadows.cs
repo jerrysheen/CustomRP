@@ -15,7 +15,10 @@ public class Shadows {
         shadowDistanceFadeId = Shader.PropertyToID("_ShadowDistanceFade"),
         cascadeDataId = Shader.PropertyToID("_CascadeData"),
         shadowAtlasSizeId = Shader.PropertyToID("_ShadowAtlasSize");
-
+    
+    static string[] shadowMaskKeywords = {
+        "_SHADOW_MASK_DISTANCE"
+    };
     static Vector4[] cascadeCullingSpheres = new Vector4[maxCascades],
         cascadeData = new Vector4[maxCascades];
     
@@ -48,6 +51,8 @@ public class Shadows {
 
     ShadowSettings settings;
 
+    bool useShadowMask;
+
     public void Setup (
         ScriptableRenderContext context, CullingResults cullingResults,
         ShadowSettings settings
@@ -56,6 +61,8 @@ public class Shadows {
         this.context = context;
         this.cullingResults = cullingResults;
         this.settings = settings;
+        useShadowMask = false;
+
     }
 
     void ExecuteBuffer () {
@@ -71,6 +78,13 @@ public class Shadows {
             cullingResults.GetShadowCasterBounds(visibleLightIndex, out Bounds b)
         )
         {
+            LightBakingOutput lightBaking = light.bakingOutput;
+            if (
+                lightBaking.lightmapBakeType == LightmapBakeType.Mixed &&
+                lightBaking.mixedLightingMode == MixedLightingMode.Shadowmask
+            ) {
+                useShadowMask = true;
+            }
             ShadowedDirectionalLights[ShadowedDirectionalLightCount] =
                 new ShadowedDirectionalLight {
                     visibleLightIndex = visibleLightIndex,
@@ -97,6 +111,10 @@ public class Shadows {
                 32, FilterMode.Bilinear, RenderTextureFormat.Shadowmap
             );
         }
+        buffer.BeginSample(bufferName);
+        SetKeywords(shadowMaskKeywords, useShadowMask ? 0 : -1);
+        buffer.EndSample(bufferName);
+        ExecuteBuffer();
     }
 
     void RenderDirectionalShadows()
@@ -232,6 +250,17 @@ public class Shadows {
         ExecuteBuffer();
     }
     
+    
+    void SetKeywords (string[] keywords, int enabledIndex) {
+        for (int i = 0; i < keywords.Length; i++) {
+            if (i == enabledIndex) {
+                buffer.EnableShaderKeyword(keywords[i]);
+            }
+            else {
+                buffer.DisableShaderKeyword(keywords[i]);
+            }
+        }
+    }
     void SetKeywords () {
         int enabledIndex = (int)settings.directional.filter - 1;
         for (int i = 0; i < directionalFilterKeywords.Length; i++) {

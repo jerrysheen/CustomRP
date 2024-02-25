@@ -39,9 +39,15 @@ struct DirectionalShadowData {
     float normalBias;
 };
 
+struct ShadowMask {
+    bool distance;
+    float4 shadows;
+};
+
 struct ShadowData_SelfDefined {
     int cascadeIndex;
     float strength;
+    ShadowMask shadowMask;
 };
 
 float FadedShadowStrength (float distance, float scale, float fade) {
@@ -50,6 +56,8 @@ float FadedShadowStrength (float distance, float scale, float fade) {
 
 ShadowData_SelfDefined GetShadowData (Surface surfaceWS) {
     ShadowData_SelfDefined data;
+    data.shadowMask.distance = false;
+    data.shadowMask.shadows = 1.0;
     int i;
     data.strength = FadedShadowStrength(surfaceWS.depth, _ShadowDistanceFade.x, _ShadowDistanceFade.y);
     for (i = 0; i < _CascadeCount; i++) {
