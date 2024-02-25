@@ -73,7 +73,9 @@ public partial class CameraRenderer
             unlitShaderTagId, sortingSettings
         ){
             enableDynamicBatching = useDynamicBatching,
-            enableInstancing = useGPUInstancing
+            enableInstancing = useGPUInstancing,
+            perObjectData = PerObjectData.Lightmaps | PerObjectData.LightProbe|
+                            PerObjectData.LightProbeProxyVolume
         };
         // draw lit.
         for (int i = 1; i <= litShaderTagIds.Length; i++) {
