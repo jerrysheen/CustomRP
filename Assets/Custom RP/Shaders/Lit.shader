@@ -62,8 +62,9 @@ Shader "Custom RP/Lit " {
 			#pragma shader_feature _PREMULTIPLY_ALPHA
 			#pragma multi_compile _ _DIRECTIONAL_PCF3 _DIRECTIONAL_PCF5 _DIRECTIONAL_PCF7
 			#pragma multi_compile _ LIGHTMAP_ON
-			#pragma multi_compile _ _SHADOW_MASK_DISTANCE
+			#pragma multi_compile _ _SHADOW_MASK_ALWAYS _SHADOW_MASK_DISTANCE
 			//#define LIGHTMAP_ON;
+			#define _RECEIVE_SHADOWS;
 			#include "LitPass.hlsl"
 			ENDHLSL
 		}
